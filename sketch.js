@@ -1,17 +1,19 @@
 function setup() {
   createCanvas(800, 500);
-
+  let adjustx=200
+  let adjusty=25*2
+  
   slider_Pd = createSlider(0, 300, 150);
   slider_Pd.style('width', '500px');
-  slider_Pd.position(20,height-30);
+  slider_Pd.position(adjustx+20,height-30+adjusty);
   
   slider_Xs = createSlider(1*100, 3*100, 1.5*100);
   slider_Xs.style('width', '80px');
-  slider_Xs.position(40,height-100);
+  slider_Xs.position(adjustx+40,height-100+adjusty);
   
   slider_Va = createSlider(150, 200, 175);
   slider_Va.style('width', '80px');
-  slider_Va.position(40,height-180);
+  slider_Va.position(adjustx+40,height-180+adjusty);
   
 }
 
@@ -84,7 +86,7 @@ function draw() {
   drawingContext.setLineDash([]);
   
 
-  console.log(Xs)
+  console.log('Hecho por: David Urbaez León - 2020')
 }
 
 

@@ -9,7 +9,7 @@ function setup() {
   slider_Xs.style('width', '80px');
   slider_Xs.position(40,height-100);
   
-  slider_Va = createSlider(175, 225, 200);
+  slider_Va = createSlider(150, 200, 175);
   slider_Va.style('width', '80px');
   slider_Va.position(40,height-180);
   
