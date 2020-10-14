@@ -34,7 +34,7 @@ function draw() {
   textSize(30);
   text('Diagrama Fasorial',width*1/3, height*1/10);
   textSize(10);
-  text('Generador Sincrónico (Ra=0ohm - Pd cte)',width*0.37, height*0.15);
+  text('Generador Sincrónico (Ra= 0[ohms] - Pd cte)',width*0.37, height*0.15);
   textSize(20);
   let val = slider_Pd.value()
   let Va_mag = slider_Va.value()
