@@ -7,7 +7,7 @@ function setup() {
   
   slider_Xs = createSlider(1*100, 3*100, 1.5*100);
   slider_Xs.style('width', '80px');
-  slider_Xs.position(20,80);
+  slider_Xs.position(20,height-100);
   
   
 }
@@ -20,10 +20,19 @@ function draw() {
   textSize(20);
   fill(255);
   text('Pd',200, height-30);
-  text('Xs',40, 70);
+  text('Xs',40, height-110);
+  
+  textSize(12);
+  text('Hecho por: David Urbaez León - 2020',width*3.5/5, height*19/20);
+  
+  textSize(30);
+  text('Diagrama Fasorial',width*1/3, height*1/10);
+  textSize(10);
+  text('Generador Sincrónico (Ra=0)',width*0.4, height*0.15);
+  textSize(20);
   let val = slider_Pd.value()
   
-  translate(width / 3, height / 2);
+  translate(width /3, height *0.6);
   
   
     
@@ -38,7 +47,7 @@ function draw() {
   
   let VXa = Ea.copy().sub(Va);
   
-  let Ia=Ea.copy().sub(Va).div(Xs*1/0.8).rotate(HALF_PI)
+  let Ia=Ea.copy().sub(Va).div(Xs*1/0.6).rotate(HALF_PI)
 
   
     
@@ -60,7 +69,7 @@ function draw() {
 
   
   drawingContext.setLineDash([10, 15]);
-  let maxLine=150
+  let maxLine=100
   stroke(100);
   line(0,maxLine,0,-maxLine);
   line(Ia.x,maxLine,Ia.x,-maxLine);
@@ -69,8 +78,7 @@ function draw() {
   stroke(0);
   drawingContext.setLineDash([]);
   
-  textSize(12);
-  text('Hecho por: David Urbaez León',width/2-80, height/2-20);
+
   console.log("Hecho por David Urbaez León")
 }
 
