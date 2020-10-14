@@ -19,7 +19,7 @@ function draw() {
   textFont('Georgia');
   textSize(20);
   fill(255);
-  text('Pd',200, height-30);
+  text('Ea',200, height-30);
   text('Xs',70, height-110);
   
   textSize(12);
@@ -28,7 +28,7 @@ function draw() {
   textSize(30);
   text('Diagrama Fasorial',width*1/3, height*1/10);
   textSize(10);
-  text('Generador Sincrónico (Ra=0)',width*0.4, height*0.15);
+  text('Generador Sincrónico (Ra=0ohm - Pd cte)',width*0.37, height*0.15);
   textSize(20);
   let val = slider_Pd.value()
   
