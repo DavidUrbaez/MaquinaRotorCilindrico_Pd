@@ -9,6 +9,9 @@ function setup() {
   slider_Xs.style('width', '80px');
   slider_Xs.position(40,height-100);
   
+  slider_Va = createSlider(175, 225, 200);
+  slider_Va.style('width', '80px');
+  slider_Va.position(40,height-180);
   
 }
 
@@ -21,6 +24,7 @@ function draw() {
   fill(255);
   text('Ea',200, height-30);
   text('Xs',70, height-110);
+  text('Va',70, height-190);
   
   textSize(12);
   text('Hecho por: David Urbaez León - 2020',width*3.5/5, height*19/20);
@@ -31,6 +35,7 @@ function draw() {
   text('Generador Sincrónico (Ra=0ohm - Pd cte)',width*0.37, height*0.15);
   textSize(20);
   let val = slider_Pd.value()
+  let Va_mag = slider_Va.value()
   
   translate(width /3, height *0.6);
   
@@ -42,7 +47,7 @@ function draw() {
   let v0 = createVector(0, 0);
   
   let Ea = createVector(150+val-Xs*20,-200);
-  let Va = createVector(200, 0);
+  let Va = createVector(Va_mag, 0);
   let j = createVector(0, 1);
   
   let VXa = Ea.copy().sub(Va);
