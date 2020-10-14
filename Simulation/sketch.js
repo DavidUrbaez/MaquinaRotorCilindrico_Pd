@@ -20,7 +20,7 @@ function draw() {
   textSize(20);
   fill(255);
   text('Pd',200, height-30);
-  text('Xs',40, height-110);
+  text('Xs',70, height-110);
   
   textSize(12);
   text('Hecho por: David Urbaez León - 2020',width*3.5/5, height*19/20);
