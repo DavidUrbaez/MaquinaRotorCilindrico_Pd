@@ -28,7 +28,7 @@ function draw() {
   textSize(30);
   text('Diagrama Fasorial',width*1/3, height*1/10);
   textSize(10);
-  text('Generador Sincrónico (Ra=0)',width*1/3, height*2/10);
+  text('Generador Sincrónico (Ra=0)',width*0.4, height*0.15);
   textSize(20);
   let val = slider_Pd.value()
   
