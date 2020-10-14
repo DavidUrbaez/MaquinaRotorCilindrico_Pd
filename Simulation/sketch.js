@@ -3,11 +3,11 @@ function setup() {
 
   slider_Pd = createSlider(0, 300, 150);
   slider_Pd.style('width', '500px');
-  slider_Pd.position(0,height-30);
+  slider_Pd.position(20,height-30);
   
   slider_Xs = createSlider(1*100, 3*100, 1.5*100);
   slider_Xs.style('width', '80px');
-  slider_Xs.position(20,height-100);
+  slider_Xs.position(40,height-100);
   
   
 }
