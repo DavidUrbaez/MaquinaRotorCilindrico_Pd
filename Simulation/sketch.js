@@ -3,13 +3,13 @@ function setup() {
   let adjustx=200
   let adjusty=25*2
   
-  slider_Pd = createSlider(0, 300, 150);
-  slider_Pd.style('width', '500px');
-  slider_Pd.position(adjustx+20,height-30+adjusty);
+  slider_Ea = createSlider(0, 300, 150);
+  slider_Ea.style('width', '500px');
+  slider_Ea.position(adjustx+20,height-30+adjusty);
   
-  slider_Xs = createSlider(1*100, 3*100, 1.5*100);
-  slider_Xs.style('width', '80px');
-  slider_Xs.position(adjustx+40,height-100+adjusty);
+  slider_Pd = createSlider(1*100, 3*100, 1.5*100);
+  slider_Pd.style('width', '80px');
+  slider_Pd.position(adjustx+40,height-100+adjusty);
   
   slider_Va = createSlider(150, 200, 175);
   slider_Va.style('width', '80px');
@@ -25,7 +25,7 @@ function draw() {
   textSize(20);
   fill(255);
   text('Ea',200, height-30);
-  text('Xs',70, height-110);
+  text('Pd',70, height-110);
   text('Va',70, height-190);
   
   textSize(12);
@@ -36,7 +36,7 @@ function draw() {
   textSize(10);
   text('Generador Sincrónico (Ra=0ohm - Pd cte)',width*0.37, height*0.15);
   textSize(20);
-  let val = slider_Pd.value()
+  let val = slider_Ea.value()
   let Va_mag = slider_Va.value()
   
   translate(width /3, height *0.6);
@@ -45,16 +45,16 @@ function draw() {
     
 
   
-  let Xs = slider_Xs.value()/100
+  let Pd = 4-slider_Pd.value()/100
   let v0 = createVector(0, 0);
   
-  let Ea = createVector(150+val-Xs*20,-200);
+  let Ea = createVector(150+val-Pd*20,-150+80*(Pd/3-1));
   let Va = createVector(Va_mag, 0);
   let j = createVector(0, 1);
   
   let VXa = Ea.copy().sub(Va);
   
-  let Ia=Ea.copy().sub(Va).div(Xs*1/0.6).rotate(HALF_PI)
+  let Ia=Ea.copy().sub(Va).div(Pd*1/0.6).rotate(HALF_PI)
 
   
     
@@ -86,7 +86,7 @@ function draw() {
   drawingContext.setLineDash([]);
   
 
-  console.log('Hecho por: David Urbaez León - 2020')
+  console.log(Pd)
 }
 
 
