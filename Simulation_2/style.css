@@ -1,0 +1,15 @@
+html, body {
+
+  padding: 0;
+  background-color: rgb(80,80,80);
+  margin-top: 25px;
+  margin-left: 100px;
+  width: 50%;
+
+}
+canvas {
+    display: block;
+}
+.center {
+
+}
