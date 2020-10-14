@@ -1,21 +1,27 @@
 function setup() {
   createCanvas(800, 500);
 
-  slider = createSlider(0, 300, 150);
-  slider.position(150, height-30);
-  slider.style('width', '500px');
-
+  slider_Pd = createSlider(0, 300, 150);
+  slider_Pd.style('width', '500px');
+  slider_Pd.position(0,height-30);
+  
+  slider_Xs = createSlider(1*100, 3*100, 1.5*100);
+  slider_Xs.style('width', '80px');
+  slider_Xs.position(20,80);
+  
+  
 }
 
 
 function draw() {
+
   background(7,35,89);
   textFont('Georgia');
   textSize(20);
   fill(255);
   text('Pd',200, height-30);
-
-  let val = slider.value()
+  text('Xs',40, 70);
+  let val = slider_Pd.value()
   
   translate(width / 3, height / 2);
   
@@ -23,16 +29,22 @@ function draw() {
     
 
   
-  let Xs = 1.5;
+  let Xs = slider_Xs.value()/100
   let v0 = createVector(0, 0);
   
-  let Ea = createVector(50+val,-200);
+  let Ea = createVector(50+val,-150-50/Xs);
   let Va = createVector(200, 0);
   let j = createVector(0, 1);
   
-  let Ia=Ea.copy().sub(Va).div(Xs).rotate(HALF_PI)
+  let VXa = Ea.copy().sub(Va);
+  
+  let Ia=Ea.copy().sub(Va).div(Xs*1/0.8).rotate(HALF_PI)
 
   
+    
+  drawArrow(Va,VXa,150);
+  
+  text('VXa',VXa.x/2+Va.x, VXa.y/2);
   
   drawArrow(v0, Ea,[68,175,242]);
   
@@ -45,21 +57,21 @@ function draw() {
   drawArrow(v0, Ia,[93,228,227]);
 
   text('Ia',Ia.x/2, Ia.y/2);
-  
+
   
   drawingContext.setLineDash([10, 15]);
-  let maxLine=200
+  let maxLine=150
   stroke(100);
   line(0,maxLine,0,-maxLine);
-  line(Va.x/Xs,maxLine,Va.x/Xs,-maxLine);
+  line(Ia.x,maxLine,Ia.x,-maxLine);
   stroke([0,203,231]);
   line(0,Ea.y,400,Ea.y);
   stroke(0);
   drawingContext.setLineDash([]);
   
-  
-
-  console.log(Va.x)
+  textSize(12);
+  text('Hecho por: David Urbaez León',width/2-80, height/2-20);
+  console.log("Hecho por David Urbaez León")
 }
 
 
