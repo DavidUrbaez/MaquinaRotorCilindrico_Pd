@@ -15,7 +15,7 @@ function setup() {
   slider_Va.position(adjustx+40,height-180+adjusty);
   
   
-  slider_Ea = createSlider(8000, 15000,10000);
+  slider_Ea = createSlider(8000, 16000,12000);
   slider_Ea.style('width', '500px');
   slider_Ea.position(adjustx+20,height-30+adjusty);
   
@@ -66,7 +66,7 @@ function draw() {
   text(nf(Xs,1,2),40+50, height-270);
   text(nf(Va_mag/7967,1,2),40+50, height-190);
   text(nf(Pd/45800000,1,2),40+50, height-110);
-  text(nf(Ea_mag/10000,1,2),170+50, height-35);
+  text(nf(Ea_mag/7967,1,2),170+50, height-35);
   
   var dis=95;
   text('p.u.',40+dis, height-270);
