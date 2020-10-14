@@ -41,7 +41,7 @@ function draw() {
   let Xs = slider_Xs.value()/100
   let v0 = createVector(0, 0);
   
-  let Ea = createVector(50+val,-150-50/Xs);
+  let Ea = createVector(150+val-Xs*20,-200);
   let Va = createVector(200, 0);
   let j = createVector(0, 1);
   
