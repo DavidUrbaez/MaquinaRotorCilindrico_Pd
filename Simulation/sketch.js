@@ -26,9 +26,9 @@ function setup() {
   slider_Pd.position(adjustx+40,height-100+adjusty);
 
   
-  img = loadImage('https://raw.githubusercontent.com/DavidUrbaez/MaquinaRotorCilindrico_Pd/gh-pages/Simulation_3/Unal1.PNG');
+  img = loadImage('https://raw.githubusercontent.com/DavidUrbaez/MaquinaRotorCilindrico_Pd/gh-pages/Simulation/Unal.PNG');
     
-  img2 = loadImage(' https://raw.githubusercontent.com/DavidUrbaez/MaquinaRotorCilindrico_Pd/gh-pages/Simulation_3/Minas1.png');
+  img2 = loadImage(' https://raw.githubusercontent.com/DavidUrbaez/MaquinaRotorCilindrico_Pd/gh-pages/Simulation/Minas.png');
 
 }
 
