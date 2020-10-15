@@ -20,7 +20,7 @@ function setup() {
   slider_Ea.style('width', '500px');
   slider_Ea.position(adjustx+20,height-30+adjusty);
   
-  slider_Pd = createSlider(20000000,45800000*1.8,45800000);
+  slider_Pd = createSlider(20000000,45800000*1.1,45800000);
   slider_Pd.style('width', '80px');
   slider_Pd.position(adjustx+40,height-100+adjusty);
 
