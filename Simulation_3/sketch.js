@@ -1,4 +1,5 @@
 let img;
+let img2;
 let factor_data=100;
 function setup() {
   createCanvas(800, 500);
@@ -26,13 +27,17 @@ function setup() {
 
   
   img = loadImage('https://raw.githubusercontent.com/DavidUrbaez/MaquinaRotorCilindrico_Pd/gh-pages/Simulation_3/Unal1.PNG');
+    
+  img2 = loadImage(' https://raw.githubusercontent.com/DavidUrbaez/MaquinaRotorCilindrico_Pd/gh-pages/Simulation_3/Minas1.png');
+
 }
 
 
 function draw() {
 
   background(7,35,89);
-  image(img, width-30-200*0.9, 30, 200*0.8, 100*0.8);
+  image(img, width-0-200*0.9, 20, 210*0.8, 100*0.8);
+  image(img2, 30, 20, 140*0.8, 100*0.8);
   textFont('Georgia');
 
   textSize(20);
