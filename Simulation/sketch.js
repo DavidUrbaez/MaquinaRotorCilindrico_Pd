@@ -98,7 +98,7 @@ function draw() {
   let factor_corriente=0.006
   Ia=Ea.copy().sub(Va).div(factor_corriente*factor*Xs).rotate(HALF_PI)
 
-  text('Ia = '+str(nf(factor_corriente*Ia.mag(),1,2))+' p.u.',width*2/3, height*0.8);
+  //text('Ia = '+str(nf(factor_corriente*Ia.mag(),1,2))+' p.u.',width*2/3, height*0.8);
   
   translate(width /3, height *0.6);
     
