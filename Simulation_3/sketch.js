@@ -1,4 +1,5 @@
 let img;
+let factor_data=100;
 function setup() {
   createCanvas(800, 500);
   let adjustx=200
@@ -6,21 +7,20 @@ function setup() {
   
   
     
-  slider_Xs = createSlider(100, 300, 240);
+  slider_Xs = createSlider(1*factor_data, 2.45*factor_data, 2.40*factor_data);
   slider_Xs.style('width', '80px');
   slider_Xs.position(adjustx+40,height-250+adjusty);
   
-  slider_Va = createSlider(6000, 10000, 7967);
-  
+  slider_Va = createSlider(0.85*factor_data, 1.25*factor_data, 1*factor_data);
   slider_Va.style('width', '80px');
   slider_Va.position(adjustx+40,height-180+adjusty);
   
   
-  slider_Ea = createSlider(8000, 16000,12000);
+  slider_Ea = createSlider(1*factor_data, 2*factor_data,1.5*factor_data);
   slider_Ea.style('width', '500px');
   slider_Ea.position(adjustx+20,height-30+adjusty);
   
-  slider_Pd = createSlider(20000000,45800000*1.1,45800000);
+  slider_Pd = createSlider(0.6*factor_data,1.1*factor_data,1*factor_data);
   slider_Pd.style('width', '80px');
   slider_Pd.position(adjustx+40,height-100+adjusty);
 
@@ -32,7 +32,7 @@ function setup() {
 function draw() {
 
   background(7,35,89);
-  image(img, 30, 30, 200*0.8, 100*0.8);
+  image(img, width-30-200*0.9, 30, 200*0.8, 100*0.8);
   textFont('Georgia');
 
   textSize(20);
@@ -53,23 +53,23 @@ function draw() {
   text('Generador Sincrónico (Ra=0 [ohms] - Pd cte)',width*0.36, height*0.15);
   textSize(20);
   
-  let Ea_mag = slider_Ea.value()
-  let Va_mag = slider_Va.value()
-  let Xs = slider_Xs.value()/100;  
+  let Ea_mag = slider_Ea.value()/factor_data;
+  let Va_mag = slider_Va.value()/factor_data;
+  let Xs = slider_Xs.value()/factor_data;  
 
   
-  let Pd = slider_Pd.value()
+  let Pd = slider_Pd.value()/100
   
-  let factor=200/8000
+  let factor=200
  
   
   let Ea_x=sqrt(Ea_mag*Ea_mag-(Pd*Xs/(3*Va_mag))*(Pd*Xs/(3*Va_mag)));
 
   //Text
   text(nf(Xs,1,2),40+50, height-270);
-  text(nf(Va_mag/7967,1,2),40+50, height-190);
-  text(nf(Pd/45800000,1,2),40+50, height-110);
-  text(nf(Ea_mag/7967,1,2),170+50, height-35);
+  text(nf(Va_mag,1,2),40+50, height-190);
+  text(nf(Pd,1,2),40+50, height-110);
+  text(nf(Ea_mag,1,2),170+50, height-35);
   
   var dis=95;
   text('p.u.',40+dis, height-270);
@@ -90,10 +90,10 @@ function draw() {
   let j = createVector(0, 1);
   
   let VXa = Ea.copy().sub(Va);
-  
-  let Ia=Ea.copy().sub(Va).div(Xs).rotate(HALF_PI)
+  let factor_corriente=0.006
+  Ia=Ea.copy().sub(Va).div(factor_corriente*factor*Xs).rotate(HALF_PI)
 
-  text('Ia = '+str(nf(Ia.mag()/57.87,1,2))+'p.u.',width*2/3, height*0.8);
+  text('Ia = '+str(nf(factor_corriente*Ia.mag(),1,2))+' p.u.',width*2/3, height*0.8);
   
   translate(width /3, height *0.6);
     
@@ -123,7 +123,6 @@ function draw() {
   line(0,Ea.y,400,Ea.y);
   stroke(0);
   drawingContext.setLineDash([]);
-  
 
 
 }
