@@ -51,15 +51,16 @@ function draw() {
   //
   textSize(12);
 
-  text('Hecho por:', width * 4.1 / 5, height * 12 / 20);
-  text('· David Urbaez León', width * 3.8 / 5, height * 13 / 20);
-  text('· Juan Camilo Jiménez Cardona', width * 3.8 / 5, height * 14 / 20);
-  text('· Angel Ricardo Marin Restrepo', width * 3.8 / 5, height * 15 / 20);
-  text('· Jose Jesus Pacheco', width * 3.8 / 5, height * 16 / 20);
-    text('Docente: ', width * 4.1 / 5, height * 17.5 / 20);
-    text('· Andres Julian Saavedra Montes', width * 3.8 / 5, height * 18.5 / 20);
+  text('Hecho por:', width * 4 / 5, height * 11.5 / 20);
+  text('· David Urbaez León', width * 3.8 / 5, height * 12.5 / 20);
+  text('· Juan Camilo Jiménez Cardona', width * 3.8 / 5, height * 13.5 / 20);
+  text('· Angel Ricardo Marin Restrepo', width * 3.8 / 5, height * 14.5 / 20);
+  text('· Jose Jesus Pacheco', width * 3.8 / 5, height * 15.5/ 20);
+  
+    text('Docente: ', width * 4.1 / 5, height * 17 / 20);
+    text('· Andres Julian Saavedra Montes', width * 3.8 / 5, height * 18 / 20);
 
-
+text('2020', width *4.2 / 5, height * 19 / 20);
 
 
   textSize(30);
