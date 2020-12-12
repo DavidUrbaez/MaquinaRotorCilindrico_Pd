@@ -52,11 +52,8 @@ function draw() {
   textSize(12);
   noStroke();
   fill(155);
-  text('Hecho por:', width * 3.9 / 5, height * 11.5 / 20);
-  text('· David Urbaez León', width * 3.7 / 5, height * 12.5 / 20);
-  text('· Juan Camilo Jiménez Cardona', width * 3.7 / 5, height * 13.5 / 20);
-  text('· Angel Ricardo Marin Restrepo', width * 3.7 / 5, height * 14.5 / 20);
-  text('· Jose Jesus Pacheco', width * 3.7 / 5, height * 15.5/ 20);
+  text('Hecho por:', width * 3.9 / 5, height * 14.5 / 20);
+  text('· David Urbaez León', width * 3.7 / 5, height * 15.5/ 20);
   
     text('Docente: ', width * 4 / 5, height * 17 / 20);
     text('Andres Julian Saavedra Montes', width * 3.7 / 5, height * 18 / 20);
