@@ -87,3 +87,7 @@ footer div {
     color: white;
     padding: 15px 50px;
 }
+
+div.content {
+    color: white;
+}

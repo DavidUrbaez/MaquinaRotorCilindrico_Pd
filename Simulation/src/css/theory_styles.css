@@ -1,0 +1,23 @@
+html,
+body {
+    background-color: rgb(255, 255, 255);
+    height: 100%;
+    margin: 0;
+}
+
+div.content {
+    display: flex;
+    justify-content: flex-start;
+    padding: 10px 30%;
+    /* align-items: center; */
+    flex-direction: column;
+}
+
+div.content p {
+    color: rgb(0, 0, 0);
+}
+
+div.content div.imgcontainer {
+    display: flex;
+    justify-content: center;
+}

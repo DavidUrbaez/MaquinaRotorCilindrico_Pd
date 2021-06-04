@@ -35,9 +35,9 @@ function setup() {
 
 
 
-    img = loadImage('Unal.PNG');
+    img = loadImage('src/img/Unal.PNG');
 
-    img2 = loadImage('Minas.png');
+    img2 = loadImage('src/img/Minas.png');
 
 }
 
