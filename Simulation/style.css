@@ -1,8 +1,12 @@
+* {
+    box-sizing: border-box;
+}
+
 html,
 body {
-    padding: 0;
     background-color: rgb(80, 80, 80);
-    width: 50%;
+    height: 100%;
+    margin: 0;
 }
 
 canvas {
@@ -18,9 +22,68 @@ canvas {
 }
 
 #sketch-holder {
+    width: 480;
     position: relative;
-    border: 10px solid rgb(7, 35, 89);
+    border: 30px solid rgb(7, 35, 89);
     border-radius: 2%;
     box-shadow: 20px 20px #333333;
-    width: 800px;
+}
+
+nav {
+    display: flex;
+    background-color: rgb(27, 27, 34);
+    /* padding: 30px; */
+    justify-content: flex-end;
+    align-items: center;
+}
+
+nav a.name {
+    color: white;
+    font-size: 30px;
+    text-decoration: none;
+    padding: 30px 30px;
+}
+
+nav a.link {
+    color: white;
+    text-decoration: none;
+    padding: 20px 30px;
+    font-size: 20px;
+    font-family: Tahoma;
+}
+
+nav a.link:hover {
+    color: rgb(58, 60, 88);
+    text-decoration: none;
+    font-size: 20px;
+    background-color: rgb(34, 34, 43);
+    border-radius: 10%;
+}
+
+div.line {
+    margin-left: 20px;
+    width: 2px;
+    height: 60px;
+    border: black;
+    background-color: white;
+}
+
+footer {
+    display: flex;
+    background-color: rgb(31, 31, 39);
+    position: fixed;
+    padding: 10px 10px 0px 10px;
+    bottom: 0;
+    width: 100%;
+    /* Height of the footer*/
+    height: 50px;
+    align-items: flex-end;
+    justify-content: flex-end;
+}
+
+footer div {
+    font-family: serif;
+    font-size: 16px;
+    color: white;
+    padding: 15px 50px;
 }
