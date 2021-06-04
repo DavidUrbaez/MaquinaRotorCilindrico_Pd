@@ -4,7 +4,7 @@ let factor_data = 100;
 var canvas;
 
 function setup() {
-    canvas = createCanvas(800, 500);
+    canvas = createCanvas(800, 480);
     canvas.parent('sketch-holder');
 
     let adjustx = 0
@@ -33,9 +33,9 @@ function setup() {
     slider_Pd.parent('sketch-holder');
 
 
-    img = loadImage('https://raw.githubusercontent.com/DavidUrbaez/MaquinaRotorCilindrico_Pd/gh-pages/Simulation/Unal.PNG');
+    img = loadImage('Unal.PNG');
 
-    img2 = loadImage(' https://raw.githubusercontent.com/DavidUrbaez/MaquinaRotorCilindrico_Pd/gh-pages/Simulation/Minas.png');
+    img2 = loadImage('Minas.png');
 
 }
 

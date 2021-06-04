@@ -19,8 +19,8 @@ canvas {
 
 #sketch-holder {
     position: relative;
-    border: 50px solid rgb(7, 35, 89);
-    border-radius: 3%;
+    border: 10px solid rgb(7, 35, 89);
+    border-radius: 2%;
     box-shadow: 20px 20px #333333;
     width: 800px;
 }
