@@ -50,21 +50,21 @@ function draw() {
     textSize(20);
     fill(255);
     // Text
-    text('Xs = ', 40, height - 270);
-    text('Va = ', 40, height - 190);
-    text('Pd = ', 40, height - 110);
-    text('Ea =', 170, height - 35);
+    text('Xs = ', 30, height - 270);
+    text('Va = ', 30, height - 190);
+    text('Pd = ', 30, height - 110);
+    text('Ea =', 160, height - 35);
     //
     textSize(12);
     noStroke();
     fill(155);
-    text('Hecho por:', width * 3.9 / 5, height * 14.5 / 20);
-    text('· David Urbaez León', width * 3.7 / 5, height * 15.5 / 20);
+    text('Hecho por:', width * 0.8, height * 0.5);
+    text('· David Urbaez León', width * 0.77, height * 0.55);
 
-    text('Docente: ', width * 4 / 5, height * 17 / 20);
-    text('Andres Julian Saavedra Montes', width * 3.7 / 5, height * 18 / 20);
+    text('Docente: ', width * 0.81, height * 0.65);
+    text('Andres Julian Saavedra Montes', width * 0.745, height * 0.7);
 
-    text('2020', width * 4.1 / 5, height * 19 / 20);
+    text('2020', width * 0.83, height * 0.75);
     fill(255);
 
     textSize(30);
@@ -85,22 +85,6 @@ function draw() {
 
     let Ea_x = sqrt(Ea_mag * Ea_mag - (Pd * Xs / (3 * Va_mag)) * (Pd * Xs / (3 * Va_mag)));
 
-    //Text
-    text(nf(Xs, 1, 2), 40 + 50, height - 270);
-    text(nf(Va_mag, 1, 2), 40 + 50, height - 190);
-    text(nf(Pd, 1, 2), 40 + 50, height - 110);
-    text(nf(Ea_mag, 1, 2), 170 + 50, height - 35);
-
-    var dis = 95;
-    text('p.u.', 40 + dis, height - 270);
-    text('p.u.', 40 + dis, height - 190);
-    text('p.u.', 40 + dis, height - 110);
-    text('p.u.', 170 + dis, height - 35);
-
-    //
-
-
-
     let v0 = createVector(0, 0);
 
     let Va = createVector(Va_mag * factor, 0);
@@ -113,7 +97,37 @@ function draw() {
     let factor_corriente = 0.006
     Ia = Ea.copy().sub(Va).div(factor_corriente * factor * Xs).rotate(HALF_PI)
 
-    //text('Ia = '+str(nf(factor_corriente*Ia.mag(),1,2))+' p.u.',width*2/3, height*0.8);
+
+
+    //Text
+
+
+    var dis = 95;
+
+    // Texto Xs
+    text(nf(Xs, 1, 3), 30 + 50, height - 270);
+    text(' ' + char('8736') + ' ' + str(90) + char('176') + ' p.u.', 40 + dis, height - 270);
+
+    // Texto Va
+    text(nf(Va_mag, 1, 3), 30 + 50, height - 190);
+    text(' ' + char('8736') + ' ' + str(0) + char('176') + ' p.u.', 40 + dis, height - 190);
+
+    // Texto Pd
+    text(nf(Pd, 1, 3), 30 + 50, height - 110);
+    text('p.u.', 40 + dis, height - 110);
+
+    // Texto de Ea
+    text(nf(Ea_mag, 1, 3) + '    ' + angle(createVector(Ea_x * factor, factor * Pd * Xs / (3 * Va_mag))), 160 + 50, height - 35);
+    text(char('8736') + '            ' + char('176') + ' p.u.', 170 + dis, height - 35);
+
+    // Texto de corriente
+    text('Ia = ' + str(nf(factor_corriente * Ia.mag(), 1, 3)) + '    ' + angle(Ia), width * 0.7, height - 15);
+    text(char('8736') + '            ' + char('176') + ' p.u.', width * 0.82, height - 15);
+    fill(150);
+    text("Corriente Calculada: ", width * 0.7, height - 40)
+    fill(255);
+    // 
+
 
     translate(width / 3, height * 0.6);
 
@@ -149,7 +163,11 @@ function draw() {
 
 
 
+function angle(vec) {
+    var value = atan(vec.y / vec.x) * 180 / PI;
 
+    return ' ' + str(nf(value, 1, 2))
+}
 
 
 
