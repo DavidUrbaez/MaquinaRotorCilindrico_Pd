@@ -1,6 +1,6 @@
 let img;
 let img2;
-let factor_data = 100;
+let factor_data = 1000;
 var canvas;
 
 function setup() {
@@ -13,24 +13,26 @@ function setup() {
 
 
     slider_Xs = createSlider(1 * factor_data, 2.45 * factor_data, 2.40 * factor_data);
-    slider_Xs.style('width', '80px');
-    slider_Xs.position(adjustx + 40, height - 250 + adjusty);
+    slider_Xs.style('width', '190px');
+    slider_Xs.position(adjustx + 30, height - 250 + adjusty);
     slider_Xs.parent('sketch-holder');
 
     slider_Va = createSlider(0.85 * factor_data, 1.25 * factor_data, 1 * factor_data);
-    slider_Va.style('width', '80px');
-    slider_Va.position(adjustx + 40, height - 180 + adjusty);
+    slider_Va.style('width', '190px');
+    slider_Va.position(adjustx + 30, height - 180 + adjusty);
     slider_Va.parent('sketch-holder');
+
+    slider_Pd = createSlider(0.6 * factor_data, 1.1 * factor_data, 1 * factor_data);
+    slider_Pd.style('width', '190px');
+    slider_Pd.position(adjustx + 30, height - 100 + adjusty);
+    slider_Pd.parent('sketch-holder');
 
     slider_Ea = createSlider(1 * factor_data, 2 * factor_data, 1.5 * factor_data);
     slider_Ea.style('width', '500px');
     slider_Ea.position(adjustx + 20, height - 30 + adjusty);
     slider_Ea.parent('sketch-holder');
 
-    slider_Pd = createSlider(0.6 * factor_data, 1.1 * factor_data, 1 * factor_data);
-    slider_Pd.style('width', '80px');
-    slider_Pd.position(adjustx + 40, height - 100 + adjusty);
-    slider_Pd.parent('sketch-holder');
+
 
 
     img = loadImage('Unal.PNG');
@@ -78,7 +80,7 @@ function draw() {
     let Xs = slider_Xs.value() / factor_data;
 
 
-    let Pd = slider_Pd.value() / 100
+    let Pd = slider_Pd.value() / factor_data
 
     let factor = 200
 
